@@ -1,6 +1,6 @@
 {
   "name": "static-rewrite",
-  "description": "Easily generate static URLs by mapping user-friendly patterns to server-side build paths.",
+  "description": "Easily generate destination paths or static URLs by mapping user-friendly patterns to server-side build paths.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/static-rewrite",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -19,6 +19,13 @@
   "scripts": {
     "test": "mocha"
   },
+  "keywords": [
+    "url",
+    "path",
+    "rewrite",
+    "rewrites",
+    "static"
+  ],
   "dependencies": {
     "define-property": "^0.2.5",
     "isobject": "^3.0.0",
@@ -30,13 +37,6 @@
     "mocha": "^3.2.0",
     "vinyl": "^2.0.1"
   },
-  "keywords": [
-    "path",
-    "rewrite",
-    "rewrites",
-    "static",
-    "url"
-  ],
   "verb": {
     "toc": false,
     "layout": "default",
