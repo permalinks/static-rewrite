@@ -1,0 +1,53 @@
+{
+  "name": "static-rewrite",
+  "description": "Easily generate static URLs by mapping user-friendly patterns to server-side build paths.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/static-rewrite",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/static-rewrite",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/static-rewrite/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "url",
+    "path",
+    "rewrite",
+    "rewrites",
+    "static"
+  ],
+  "dependencies": {
+    "define-property": "^0.2.5",
+    "isobject": "^3.0.0",
+    "path-to-regexp": "^1.7.0",
+    "permalinks": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.11",
+    "mocha": "^3.2.0",
+    "vinyl": "^2.0.1"
+  },
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
+}
