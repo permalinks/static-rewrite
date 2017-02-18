@@ -1,7 +1,7 @@
 {
   "name": "static-rewrite",
   "description": "Easily generate destination paths or static URLs by mapping user-friendly patterns to server-side build paths.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/static-rewrite",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/static-rewrite",
