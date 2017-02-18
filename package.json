@@ -2,11 +2,11 @@
   "name": "static-rewrite",
   "description": "Easily generate destination paths or static URLs by mapping user-friendly patterns to server-side build paths.",
   "version": "0.1.1",
-  "homepage": "https://github.com/jonschlinkert/static-rewrite",
+  "homepage": "https://github.com/permalinks/static-rewrite",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/static-rewrite",
+  "repository": "permalinks/static-rewrite",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/static-rewrite/issues"
+    "url": "https://github.com/permalinks/static-rewrite/issues"
   },
   "license": "MIT",
   "files": [

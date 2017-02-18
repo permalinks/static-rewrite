@@ -1,4 +1,4 @@
-# static-rewrite [![NPM version](https://img.shields.io/npm/v/static-rewrite.svg?style=flat)](https://www.npmjs.com/package/static-rewrite) [![NPM monthly downloads](https://img.shields.io/npm/dm/static-rewrite.svg?style=flat)](https://npmjs.org/package/static-rewrite)  [![NPM total downloads](https://img.shields.io/npm/dt/static-rewrite.svg?style=flat)](https://npmjs.org/package/static-rewrite) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/static-rewrite.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/static-rewrite)
+# static-rewrite [![NPM version](https://img.shields.io/npm/v/static-rewrite.svg?style=flat)](https://www.npmjs.com/package/static-rewrite) [![NPM monthly downloads](https://img.shields.io/npm/dm/static-rewrite.svg?style=flat)](https://npmjs.org/package/static-rewrite)  [![NPM total downloads](https://img.shields.io/npm/dt/static-rewrite.svg?style=flat)](https://npmjs.org/package/static-rewrite) [![Linux Build Status](https://img.shields.io/travis/permalinks/static-rewrite.svg?style=flat&label=Travis)](https://travis-ci.org/permalinks/static-rewrite)
 
 > Easily generate destination paths or static URLs by mapping user-friendly patterns to server-side build paths.
 
@@ -75,7 +75,7 @@ var Rewriter = require('static-rewrite');
 
 ## API
 
-### [Rewriter](index.js#L30)
+### [Rewriter](index.js#L31)
 
 Create an instance of `Rewriter` with the given `options`.
 
@@ -100,7 +100,7 @@ console.log(rewriter.rewrite({path: 'content/docs/api.md'}));
 //=> 'docs/api/index.html'
 ```
 
-### [.rule](index.js#L69)
+### [.rule](index.js#L70)
 
 Register a rewrite rule with a `regex` to use for matching paths, a `structure` to use for the replacement patter, and an optional validation `fn` to supplement the regex when matching.
 
@@ -122,7 +122,7 @@ rewriter.rule(/\.md$/, 'blog/:stem/index.html', function(file) {
 });
 ```
 
-### [.rewrite](index.js#L85)
+### [.rewrite](index.js#L86)
 
 Run rewrite [rules](#rule) on the given `file`. If a rule matches
 the file, the `file.path` will be rewritten using `locals`, and values
@@ -134,7 +134,7 @@ from the `file` and `file.data`.
 * `locals` **{Object}**
 * `returns` **{String}**: Returns the formatted path or the original `file.path` if no rewrite rules match the file.
 
-### [.match](index.js#L122)
+### [.match](index.js#L123)
 
 Calls `RegExp.exec()` on `file.path`, using the regex from the given rewrite `rule`. If the file matches, the match arguments are returned, otherwise `null`.
 
@@ -162,7 +162,7 @@ console.log(rewriter.match(ruleA, fileB)); //<= true
 console.log(rewriter.match(ruleB, fileB)); //<= true
 ```
 
-### [Rule](index.js#L174)
+### [Rule](index.js#L169)
 
 Create a new `Rule` with the given `pattern`, `structure` and optional function for validating or adding data to the context
 
