@@ -12,13 +12,13 @@ $ npm install --save static-rewrite
 
 ## What does this do?
 
-This module does something similar to [URL rewriting](#url-rewriting), but for static paths at build-time. The goal is consistently and easily generate correct destination paths during development, regardless of the source paths.
+This module does something similar to [URL rewriting](#url-rewriting), but for static paths at build-time. The goal is to consistently and easily generate correct destination paths during development, regardless of the source paths.
 
 **Examples**
 
-Let's say we have a blog, and we want to:
+Let's say we have a blog, with post titled "How To Create Effective Permalinks", and we want to:
 
-* automatically write blog posts to the root of our site
+* automatically write the post to the root of our site
 * use the slugified `title` from front-matter as the folder name (for "pretty" permalinks)
 * append `/index.html` to the path (also for "pretty" permalinks)
 
