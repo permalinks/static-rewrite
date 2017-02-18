@@ -127,27 +127,19 @@ Rewriter.prototype.match = function(rule, file) {
     throw new Error('expected a rule as the first argument');
   }
 
-  var keys = [];
-  let regex = toRegex(rule.pattern, keys, this.options);
-  let match = regex.exec(file.path);
+  let match = rule.regex.exec(file.path);
   if (match) {
-    match.regex = regex;
-    match.keys = keys;
-    match.rule = rule;
-    var params = {};
-
     // create params from rule pattern
     for (let i = 1; i < match.length; ++i) {
-      let param = keys[i - 1];
-      params[param.name] = match[i];
+      let param = rule.keys[i - 1];
+      rule.params[param.name] = match[i];
     }
 
     if (typeof rule.fn === 'function') {
-      return rule.fn.call(this, file, params, match);
+      return rule.fn.call(this, file, rule.params, match);
     }
     return true;
   }
-
   return false;
 };
 
@@ -178,10 +170,26 @@ function Rule(pattern, structure, fn) {
   if (fn && typeof fn !== 'function') {
     throw new TypeError('expected fn to be a function or undefined');
   }
+
   define(this, 'isRule', true);
+  this.keys = [];
+  this.params = {};
   this.pattern = pattern;
   this.structure = structure;
+  this.options = {strict: true};
   this.fn = fn;
+  var regex;
+
+  Object.defineProperty(this, 'regex', {
+    configurable: true,
+    enumberable: true,
+    set: function(val) {
+      regex = val;
+    },
+    get: function() {
+      return regex || (regex = toRegex(this.pattern, this.keys, this.options));
+    }
+  });
 }
 
 /**
